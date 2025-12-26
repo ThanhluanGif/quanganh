@@ -1,216 +1,491 @@
-<!DOCTYPE html>
-<html lang="vi">
+<!doctype html>
+<html lang='vi'>
 <head>
-  <meta charset="UTF-8" />
-  <title>Album Troll Lớp 7H</title>
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-    body {
-      font-family: "Times New Roman", serif;
-      background: #ffffff;
-      color: #111;
-    }
-
-    /* THANH MENU TRÊN */
-    header {
-      border-bottom: 3px solid #000;
-      padding: 12px 40px;
-      display: flex;
-      justify-content: flex-start;
-      gap: 24px;
-      align-items: center;
-    }
-    .menu-item {
-      padding: 6px 18px;
-      border-radius: 16px;
-      border: 2px solid transparent;
-      cursor: pointer;
-      font-size: 18px;
-    }
-    .menu-item.active {
-      border-color: #000;
-      font-weight: bold;
-    }
-
-    /* KHU VỰC NỘI DUNG CHÍNH */
-    main {
-      padding: 30px 40px 60px;
-      display: flex;
-      flex-direction: column;
-      gap: 32px;
-      min-height: calc(100vh - 80px);
-    }
-
-    .top-section {
-      display: grid;
-      grid-template-columns: 350px 1fr;
-      gap: 40px;
-      align-items: center;
-    }
-
-    /* HÌNH TRÒN ẢNH LỚP */
-    .class-photo-wrapper {
-      width: 320px;
-      height: 320px;
-      border-radius: 50%;
-      border: 4px solid #000;
-      overflow: hidden;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-left: 40px;
-    }
-    .class-photo-wrapper img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-    .class-photo-placeholder {
-      color: red;
-      font-size: 22px;
-    }
-
-    .intro-text {
-      text-align: center;
-      font-size: 22px;
-      color: #c00;
-    }
-    .intro-text h1 {
-      font-size: 28px;
-      margin-bottom: 8px;
-      color: #000;
-    }
-    .intro-text p {
-      margin-top: 6px;
-      font-size: 18px;
-      color: #444;
-    }
-
-    /* LƯỚI CÁC Ô HỌC SINH */
-    .students-grid {
-      margin-top: 20px;
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
-      gap: 18px;
-    }
-    .student-card {
-      border: 1px solid #ddd;
-      border-radius: 10px;
-      padding: 10px;
-      text-align: center;
-      cursor: pointer;
-      transition: transform 0.15s, box-shadow 0.15s;
-      background: #fafafa;
-      text-decoration: none;
-      color: inherit;
-    }
-    .student-card:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 4px 10px rgba(0,0,0,0.12);
-    }
-    .student-card img {
-      width: 70px;
-      height: 70px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin-bottom: 6px;
-      border: 2px solid #aaa;
-    }
-    .student-card span {
-      font-size: 14px;
-      font-weight: bold;
-      display: block;
-    }
-
-    /* FOOTER */
-    footer {
-      margin-top: auto;
-      padding: 20px 0 30px;
-      text-align: center;
-      font-size: 13px;
-      color: #888;
-    }
-
-    @media (max-width: 768px) {
-      .top-section {
-        grid-template-columns: 1fr;
-        justify-items: center;
-      }
-      .class-photo-wrapper {
-        margin-left: 0;
-      }
-    }
-  </style>
+  <meta charset='utf-8' />
+  <meta name='viewport' content='width=device-width, initial-scale=1' />
+  <title>Album sinh nhật lớp 7H</title>
+  <link rel='stylesheet' href='assets/styles.css' />
 </head>
-<body>
-  <!-- THANH MENU -->
-  <header>
-    <div class="menu-item active">Ảnh</div>
-    <div class="menu-item">Ảnh sinh nhật</div>
+<body class='page-home'>
+  <header class='site-header'>
+    <div class='brand'>
+      <div class='brand-mark'>7H</div>
+      <div class='brand-text'>
+        <strong>Album sinh nhật lớp 7H</strong>
+        <span>Bộ sưu tập kỷ niệm đáng nhớ</span>
+      </div>
+    </div>
+    <nav class='site-nav'>
+      <a class='nav-link is-active' href='index.html'>Trang chủ</a>
+      <a class='nav-link' href='#albums'>Album</a>
+      <a class='nav-link' href='#about'>Giới thiệu</a>
+    </nav>
   </header>
 
-  <!-- NỘI DUNG CHÍNH -->
   <main>
-    <section class="top-section">
-      <!-- HÌNH TRÒN ẢNH LỚP -->
-      <div class="class-photo-wrapper">
-        <!-- Đổi src thành ảnh lớp thật, ví dụ: images/lop7h.jpg -->
-        <!-- <img src="images/lop7h.jpg" alt="Ảnh lớp 7H"> -->
-        <div class="class-photo-placeholder">Ảnh lớp 7H</div>
+    <section class='hero'>
+      <div class='hero-panel'>
+        <p class='eyebrow'>Album sinh nhật lớp 7H</p>
+        <h1 class='hero-title'>Bộ sưu tập kỷ niệm chuyên nghiệp của cả lớp</h1>
+        <p class='hero-lead'>
+          Mỗi bạn có một album riêng, lưu lại những khoảnh khắc vui vẻ và đáng yêu trong năm học.
+          Hãy chọn một thẻ để xem ảnh của từng bạn nhé.
+        </p>
+        <div class='hero-actions'>
+          <a class='btn primary' href='#albums'>Xem tất cả album</a>
+          <a class='btn ghost' href='#about'>Hướng dẫn nhanh</a>
+        </div>
+        <div class='hero-stats'>
+          <div class='stat-card'>
+            <span class='stat-value'>42</span>
+            <span class='stat-label'>bạn trong lớp</span>
+          </div>
+          <div class='stat-card'>
+            <span class='stat-value'>732</span>
+            <span class='stat-label'>tổng ảnh</span>
+          </div>
+          <div class='stat-card'>
+            <span class='stat-value'>42</span>
+            <span class='stat-label'>album cá nhân</span>
+          </div>
+        </div>
       </div>
-
-      <!-- GIỚI THIỆU -->
-      <div class="intro-text">
-        <h1>Giới thiệu trang ảnh troll lớp 7H</h1>
-        <p>
-          Đây là album siêu cấp vui nhộn của lớp 7H với những khoảnh khắc troll,
-          biểu cảm “khó đỡ” và các hoạt động học tập – vui chơi hằng ngày.
-        </p>
-        <p>
-          Mỗi bạn sẽ có một “gallery” riêng, bấm vào ô bên dưới để xem toàn bộ
-          ảnh troll của bạn đó nhé! 🤣
-        </p>
+      <div class='hero-collage'>
+      <div class='collage-card' style='--i: 1'>
+        <img src='images/Couple/2179203486366098759.jpg' alt='Ảnh của Couple' loading='lazy' />
+        <span>Couple</span>
+      </div>
+      <div class='collage-card' style='--i: 2'>
+        <img src='images/Anh%20%C4%90%E1%BB%A9c/IMG20251117091800.jpg' alt='Ảnh của Anh Đức' loading='lazy' />
+        <span>Anh Đức</span>
+      </div>
+      <div class='collage-card' style='--i: 3'>
+        <img src='images/B%C3%A1ch/B%C3%A1ch%2000%20%E1%BA%A2nh%20N%E1%BB%81n.jpg' alt='Ảnh của Bách' loading='lazy' />
+        <span>Bách</span>
+      </div>
+      <div class='collage-card' style='--i: 4'>
+        <img src='images/B%C3%ACnh%20Minh/Screenshot%202025-10-06%20080919.png' alt='Ảnh của Bình Minh' loading='lazy' />
+        <span>Bình Minh</span>
+      </div>
       </div>
     </section>
 
-    <!-- LƯỚI HỌC SINH -->
-    <section>
-      <div class="students-grid">
-        <!-- Mỗi thẻ <a> là 1 học sinh.
-             href = link tới trang ảnh riêng (file html khác).
-             Đổi src, alt, tên theo thực tế nha. -->
-
-        <a class="student-card" href="hs-ngoc-anh.html">
-          <img src="images/ngoc-anh-avatar.jpg" alt="Ngọc Anh">
-          <span>Ngọc Anh</span>
-        </a>
-
-        <a class="student-card" href="hs-minh-khoa.html">
-          <img src="images/minh-khoa-avatar.jpg" alt="Minh Khoa">
-          <span>Minh Khoa</span>
-        </a>
-
-        <a class="student-card" href="hs-bao-lam.html">
-          <img src="images/bao-lam-avatar.jpg" alt="Bảo Lâm">
-          <span>Bảo Lâm</span>
-        </a>
-
-        <a class="student-card" href="hs-thu-trang.html">
-          <img src="images/thu-trang-avatar.jpg" alt="Thu Trang">
-          <span>Thu Trang</span>
-        </a>
-
-        <!-- Thêm bớt học sinh bằng cách copy thêm block student-card -->
+    <section id='albums' class='albums'>
+      <div class='section-header'>
+        <div>
+          <p class='section-eyebrow'>Danh sách album</p>
+          <h2 class='section-title'>Thư viện bạn bè</h2>
+          <p class='section-subtitle'>Nhấn vào thẻ để mở album riêng.</p>
+        </div>
+        <div class='search'>
+          <input type='search' placeholder='Tìm theo tên...' data-search-input />
+          <p class='search-hint'>Gõ tên để lọc nhanh</p>
+        </div>
       </div>
+
+      <div class='cards-grid'>
+      <a class='person-card' href='Couple.html' data-person-card data-name='Couple' style='--i: 1'>
+        <div class='card-media'>
+          <img src='images/Couple/2179203486366098759.jpg' alt='Album Couple' loading='lazy' />
+        </div>
+        <div class='card-body'>
+          <h3>Couple</h3>
+          <span class='count-chip'>95 ảnh</span>
+        </div>
+      </a>
+      <a class='person-card' href='Anh%20%C4%90%E1%BB%A9c.html' data-person-card data-name='Anh Đức' style='--i: 2'>
+        <div class='card-media'>
+          <img src='images/Anh%20%C4%90%E1%BB%A9c/IMG20251117091800.jpg' alt='Album Anh Đức' loading='lazy' />
+        </div>
+        <div class='card-body'>
+          <h3>Anh Đức</h3>
+          <span class='count-chip'>2 ảnh</span>
+        </div>
+      </a>
+      <a class='person-card' href='B%C3%A1ch.html' data-person-card data-name='Bách' style='--i: 3'>
+        <div class='card-media'>
+          <img src='images/B%C3%A1ch/B%C3%A1ch%2000%20%E1%BA%A2nh%20N%E1%BB%81n.jpg' alt='Album Bách' loading='lazy' />
+        </div>
+        <div class='card-body'>
+          <h3>Bách</h3>
+          <span class='count-chip'>31 ảnh</span>
+        </div>
+      </a>
+      <a class='person-card' href='B%C3%ACnh%20Minh.html' data-person-card data-name='Bình Minh' style='--i: 4'>
+        <div class='card-media'>
+          <img src='images/B%C3%ACnh%20Minh/Screenshot%202025-10-06%20080919.png' alt='Album Bình Minh' loading='lazy' />
+        </div>
+        <div class='card-body'>
+          <h3>Bình Minh</h3>
+          <span class='count-chip'>1 ảnh</span>
+        </div>
+      </a>
+      <a class='person-card' href='C%C6%B0%C6%A1ng.html' data-person-card data-name='Cương' style='--i: 5'>
+        <div class='card-media'>
+          <img src='images/C%C6%B0%C6%A1ng/IMG20251107151342.jpg' alt='Album Cương' loading='lazy' />
+        </div>
+        <div class='card-body'>
+          <h3>Cương</h3>
+          <span class='count-chip'>19 ảnh</span>
+        </div>
+      </a>
+      <a class='person-card' href='Duy%20B%E1%BA%A3o.html' data-person-card data-name='Duy Bảo' style='--i: 6'>
+        <div class='card-media'>
+          <img src='images/Duy%20B%E1%BA%A3o/Duy%20B%E1%BA%A3o%2001.jpg' alt='Album Duy Bảo' loading='lazy' />
+        </div>
+        <div class='card-body'>
+          <h3>Duy Bảo</h3>
+          <span class='count-chip'>7 ảnh</span>
+        </div>
+      </a>
+      <a class='person-card' href='D%C5%A9ng.html' data-person-card data-name='Dũng' style='--i: 7'>
+        <div class='card-media'>
+          <img src='images/D%C5%A9ng/D%C5%A9ng%2001.jpg' alt='Album Dũng' loading='lazy' />
+        </div>
+        <div class='card-body'>
+          <h3>Dũng</h3>
+          <span class='count-chip'>27 ảnh</span>
+        </div>
+      </a>
+      <a class='person-card' href='Gia%20B%E1%BA%A3o.html' data-person-card data-name='Gia Bảo' style='--i: 8'>
+        <div class='card-media'>
+          <img src='images/Gia%20B%E1%BA%A3o/Gia%20B%E1%BA%A3o%2000%20%E1%BA%A2nh%20N%E1%BB%81n.jpg' alt='Album Gia Bảo' loading='lazy' />
+        </div>
+        <div class='card-body'>
+          <h3>Gia Bảo</h3>
+          <span class='count-chip'>18 ảnh</span>
+        </div>
+      </a>
+      <a class='person-card' href='Gia%20Huy.html' data-person-card data-name='Gia Huy' style='--i: 9'>
+        <div class='card-media'>
+          <img src='images/Gia%20Huy/IMG20251117083029.jpg' alt='Album Gia Huy' loading='lazy' />
+        </div>
+        <div class='card-body'>
+          <h3>Gia Huy</h3>
+          <span class='count-chip'>6 ảnh</span>
+        </div>
+      </a>
+      <a class='person-card' href='Hi%E1%BA%BFu.html' data-person-card data-name='Hiếu' style='--i: 10'>
+        <div class='card-media'>
+          <img src='images/Hi%E1%BA%BFu/IMG20250905102748.jpg' alt='Album Hiếu' loading='lazy' />
+        </div>
+        <div class='card-body'>
+          <h3>Hiếu</h3>
+          <span class='count-chip'>22 ảnh</span>
+        </div>
+      </a>
+      <a class='person-card' href='H%C3%A0.html' data-person-card data-name='Hà' style='--i: 11'>
+        <div class='card-media'>
+          <img src='images/H%C3%A0/H%C3%A0%2000%20%E1%BA%A2nh%20N%E1%BB%81n.png' alt='Album Hà' loading='lazy' />
+        </div>
+        <div class='card-body'>
+          <h3>Hà</h3>
+          <span class='count-chip'>55 ảnh</span>
+        </div>
+      </a>
+      <a class='person-card' href='H%E1%BA%A3i%20Nam.html' data-person-card data-name='Hải Nam' style='--i: 12'>
+        <div class='card-media'>
+          <img src='images/H%E1%BA%A3i%20Nam/IMG20251117072938.jpg' alt='Album Hải Nam' loading='lazy' />
+        </div>
+        <div class='card-body'>
+          <h3>Hải Nam</h3>
+          <span class='count-chip'>2 ảnh</span>
+        </div>
+      </a>
+      <a class='person-card' href='H%E1%BA%A3i%20Phong.html' data-person-card data-name='Hải Phong' style='--i: 13'>
+        <div class='card-media'>
+          <img src='images/H%E1%BA%A3i%20Phong/H%E1%BA%A3i%20Phong%2001.jpg' alt='Album Hải Phong' loading='lazy' />
+        </div>
+        <div class='card-body'>
+          <h3>Hải Phong</h3>
+          <span class='count-chip'>25 ảnh</span>
+        </div>
+      </a>
+      <a class='person-card' href='H%E1%BB%AFu%20L%C3%A2m.html' data-person-card data-name='Hữu Lâm' style='--i: 14'>
+        <div class='card-media'>
+          <img src='images/H%E1%BB%AFu%20L%C3%A2m/IMG20250514090526.jpg' alt='Album Hữu Lâm' loading='lazy' />
+        </div>
+        <div class='card-body'>
+          <h3>Hữu Lâm</h3>
+          <span class='count-chip'>12 ảnh</span>
+        </div>
+      </a>
+      <a class='person-card' href='KBN.html' data-person-card data-name='KBN' style='--i: 15'>
+        <div class='card-media'>
+          <img src='images/KBN/IMG20251113114904.jpg' alt='Album KBN' loading='lazy' />
+        </div>
+        <div class='card-body'>
+          <h3>KBN</h3>
+          <span class='count-chip'>8 ảnh</span>
+        </div>
+      </a>
+      <a class='person-card' href='Kh%C3%A1c.html' data-person-card data-name='Khác' style='--i: 16'>
+        <div class='card-media'>
+          <img src='images/Kh%C3%A1c/6c299adb-2eb7-4ab0-8fc2-143e5ffe621f.jpg' alt='Album Khác' loading='lazy' />
+        </div>
+        <div class='card-body'>
+          <h3>Khác</h3>
+          <span class='count-chip'>54 ảnh</span>
+        </div>
+      </a>
+      <a class='person-card' href='Kh%C3%A1nh%20An.html' data-person-card data-name='Khánh An' style='--i: 17'>
+        <div class='card-media'>
+          <img src='images/Kh%C3%A1nh%20An/IMG20250325085400.jpg' alt='Album Khánh An' loading='lazy' />
+        </div>
+        <div class='card-body'>
+          <h3>Khánh An</h3>
+          <span class='count-chip'>30 ảnh</span>
+        </div>
+      </a>
+      <a class='person-card' href='Kh%C3%B4i.html' data-person-card data-name='Khôi' style='--i: 18'>
+        <div class='card-media'>
+          <img src='images/Kh%C3%B4i/IMG20251204115235.jpg' alt='Album Khôi' loading='lazy' />
+        </div>
+        <div class='card-body'>
+          <h3>Khôi</h3>
+          <span class='count-chip'>2 ảnh</span>
+        </div>
+      </a>
+      <a class='person-card' href='Ki%E1%BB%87t.html' data-person-card data-name='Kiệt' style='--i: 19'>
+        <div class='card-media'>
+          <img src='images/Ki%E1%BB%87t/IMG20251117090901.jpg' alt='Album Kiệt' loading='lazy' />
+        </div>
+        <div class='card-body'>
+          <h3>Kiệt</h3>
+          <span class='count-chip'>1 ảnh</span>
+        </div>
+      </a>
+      <a class='person-card' href='K%E1%BB%B3%20Phong.html' data-person-card data-name='Kỳ Phong' style='--i: 20'>
+        <div class='card-media'>
+          <img src='images/K%E1%BB%B3%20Phong/IMG20250815093758.jpg' alt='Album Kỳ Phong' loading='lazy' />
+        </div>
+        <div class='card-body'>
+          <h3>Kỳ Phong</h3>
+          <span class='count-chip'>8 ảnh</span>
+        </div>
+      </a>
+      <a class='person-card' href='Lam.html' data-person-card data-name='Lam' style='--i: 21'>
+        <div class='card-media'>
+          <img src='images/Lam/Lam%2001.jpg' alt='Album Lam' loading='lazy' />
+        </div>
+        <div class='card-body'>
+          <h3>Lam</h3>
+          <span class='count-chip'>65 ảnh</span>
+        </div>
+      </a>
+      <a class='person-card' href='Minh%20%C4%90%E1%BB%A9c.html' data-person-card data-name='Minh Đức' style='--i: 22'>
+        <div class='card-media'>
+          <img src='images/Minh%20%C4%90%E1%BB%A9c/IMG20251204115423.jpg' alt='Album Minh Đức' loading='lazy' />
+        </div>
+        <div class='card-body'>
+          <h3>Minh Đức</h3>
+          <span class='count-chip'>45 ảnh</span>
+        </div>
+      </a>
+      <a class='person-card' href='Nam%20Phong.html' data-person-card data-name='Nam Phong' style='--i: 23'>
+        <div class='card-media'>
+          <img src='images/Nam%20Phong/IMG20251106115258.jpg' alt='Album Nam Phong' loading='lazy' />
+        </div>
+        <div class='card-body'>
+          <h3>Nam Phong</h3>
+          <span class='count-chip'>15 ảnh</span>
+        </div>
+      </a>
+      <a class='person-card' href='Ng%C3%A2n.html' data-person-card data-name='Ngân' style='--i: 24'>
+        <div class='card-media'>
+          <img src='images/Ng%C3%A2n/IMG20251115093057.jpg' alt='Album Ngân' loading='lazy' />
+        </div>
+        <div class='card-body'>
+          <h3>Ngân</h3>
+          <span class='count-chip'>6 ảnh</span>
+        </div>
+      </a>
+      <a class='person-card' href='Ng%E1%BB%8Dc%20Linh.html' data-person-card data-name='Ngọc Linh' style='--i: 25'>
+        <div class='card-media'>
+          <img src='images/Ng%E1%BB%8Dc%20Linh/IMG20250514090743.jpg' alt='Album Ngọc Linh' loading='lazy' />
+        </div>
+        <div class='card-body'>
+          <h3>Ngọc Linh</h3>
+          <span class='count-chip'>4 ảnh</span>
+        </div>
+      </a>
+      <a class='person-card' href='Nh%E1%BA%ADt%20Nam.html' data-person-card data-name='Nhật Nam' style='--i: 26'>
+        <div class='card-media'>
+          <img src='images/Nh%E1%BA%ADt%20Nam/IMG20251117083123.jpg' alt='Album Nhật Nam' loading='lazy' />
+        </div>
+        <div class='card-body'>
+          <h3>Nhật Nam</h3>
+          <span class='count-chip'>11 ảnh</span>
+        </div>
+      </a>
+      <a class='person-card' href='Ph%C3%BAc.html' data-person-card data-name='Phúc' style='--i: 27'>
+        <div class='card-media'>
+          <img src='images/Ph%C3%BAc/IMG20251115093147.jpg' alt='Album Phúc' loading='lazy' />
+        </div>
+        <div class='card-body'>
+          <h3>Phúc</h3>
+          <span class='count-chip'>6 ảnh</span>
+        </div>
+      </a>
+      <a class='person-card' href='Ph%C6%B0%C6%A1ng.html' data-person-card data-name='Phương' style='--i: 28'>
+        <div class='card-media'>
+          <img src='images/Ph%C6%B0%C6%A1ng/IMG20250513091344.jpg' alt='Album Phương' loading='lazy' />
+        </div>
+        <div class='card-body'>
+          <h3>Phương</h3>
+          <span class='count-chip'>4 ảnh</span>
+        </div>
+      </a>
+      <a class='person-card' href='Quy%C3%AAn.html' data-person-card data-name='Quyên' style='--i: 29'>
+        <div class='card-media'>
+          <img src='images/Quy%C3%AAn/IMG20250508073043.jpg' alt='Album Quyên' loading='lazy' />
+        </div>
+        <div class='card-body'>
+          <h3>Quyên</h3>
+          <span class='count-chip'>6 ảnh</span>
+        </div>
+      </a>
+      <a class='person-card' href='Qu%C3%A2n.html' data-person-card data-name='Quân' style='--i: 30'>
+        <div class='card-media'>
+          <img src='images/Qu%C3%A2n/IMG20251107151510.jpg' alt='Album Quân' loading='lazy' />
+        </div>
+        <div class='card-body'>
+          <h3>Quân</h3>
+          <span class='count-chip'>12 ảnh</span>
+        </div>
+      </a>
+      <a class='person-card' href='TBN.html' data-person-card data-name='TBN' style='--i: 31'>
+        <div class='card-media'>
+          <img src='images/TBN/IMG20250325091158.jpg' alt='Album TBN' loading='lazy' />
+        </div>
+        <div class='card-body'>
+          <h3>TBN</h3>
+          <span class='count-chip'>4 ảnh</span>
+        </div>
+      </a>
+      <a class='person-card' href='Th%E1%BA%AFng.html' data-person-card data-name='Thắng' style='--i: 32'>
+        <div class='card-media'>
+          <img src='images/Th%E1%BA%AFng/IMG20250325083423.jpg' alt='Album Thắng' loading='lazy' />
+        </div>
+        <div class='card-body'>
+          <h3>Thắng</h3>
+          <span class='count-chip'>11 ảnh</span>
+        </div>
+      </a>
+      <a class='person-card' href='Trang.html' data-person-card data-name='Trang' style='--i: 33'>
+        <div class='card-media'>
+          <img src='images/Trang/IMG20250520084831.jpg' alt='Album Trang' loading='lazy' />
+        </div>
+        <div class='card-body'>
+          <h3>Trang</h3>
+          <span class='count-chip'>20 ảnh</span>
+        </div>
+      </a>
+      <a class='person-card' href='Tr%C3%AD.html' data-person-card data-name='Trí' style='--i: 34'>
+        <div class='card-media'>
+          <img src='images/Tr%C3%AD/IMG20250506072943.jpg' alt='Album Trí' loading='lazy' />
+        </div>
+        <div class='card-body'>
+          <h3>Trí</h3>
+          <span class='count-chip'>8 ảnh</span>
+        </div>
+      </a>
+      <a class='person-card' href='Tu%E1%BA%A5n%20L%C3%A2m.html' data-person-card data-name='Tuấn Lâm' style='--i: 35'>
+        <div class='card-media'>
+          <img src='images/Tu%E1%BA%A5n%20L%C3%A2m/IMG20251115093052.jpg' alt='Album Tuấn Lâm' loading='lazy' />
+        </div>
+        <div class='card-body'>
+          <h3>Tuấn Lâm</h3>
+          <span class='count-chip'>13 ảnh</span>
+        </div>
+      </a>
+      <a class='person-card' href='Tu%E1%BA%A5n%20Th%C3%A0nh.html' data-person-card data-name='Tuấn Thành' style='--i: 36'>
+        <div class='card-media'>
+          <img src='images/Tu%E1%BA%A5n%20Th%C3%A0nh/IMG20250325084915.jpg' alt='Album Tuấn Thành' loading='lazy' />
+        </div>
+        <div class='card-body'>
+          <h3>Tuấn Thành</h3>
+          <span class='count-chip'>13 ảnh</span>
+        </div>
+      </a>
+      <a class='person-card' href='Tu%E1%BB%87%20Minh.html' data-person-card data-name='Tuệ Minh' style='--i: 37'>
+        <div class='card-media'>
+          <img src='images/Tu%E1%BB%87%20Minh/IMG20251117074149.jpg' alt='Album Tuệ Minh' loading='lazy' />
+        </div>
+        <div class='card-body'>
+          <h3>Tuệ Minh</h3>
+          <span class='count-chip'>6 ảnh</span>
+        </div>
+      </a>
+      <a class='person-card' href='T%C6%B0%E1%BB%9Dng.html' data-person-card data-name='Tường' style='--i: 38'>
+        <div class='card-media'>
+          <img src='images/T%C6%B0%E1%BB%9Dng/IMG20251204114830.jpg' alt='Album Tường' loading='lazy' />
+        </div>
+        <div class='card-body'>
+          <h3>Tường</h3>
+          <span class='count-chip'>19 ảnh</span>
+        </div>
+      </a>
+      <a class='person-card' href='V%C6%B0%E1%BB%A3ng%20Th%C3%A0nh.html' data-person-card data-name='Vượng Thành' style='--i: 39'>
+        <div class='card-media'>
+          <img src='images/V%C6%B0%E1%BB%A3ng%20Th%C3%A0nh/IMG20251106115331.jpg' alt='Album Vượng Thành' loading='lazy' />
+        </div>
+        <div class='card-body'>
+          <h3>Vượng Thành</h3>
+          <span class='count-chip'>13 ảnh</span>
+        </div>
+      </a>
+      <a class='person-card' href='%C4%90an.html' data-person-card data-name='Đan' style='--i: 40'>
+        <div class='card-media'>
+          <img src='images/%C4%90an/IMG20251115094201.jpg' alt='Album Đan' loading='lazy' />
+        </div>
+        <div class='card-body'>
+          <h3>Đan</h3>
+          <span class='count-chip'>6 ảnh</span>
+        </div>
+      </a>
+      <a class='person-card' href='%C4%90%C3%B4ng.html' data-person-card data-name='Đông' style='--i: 41'>
+        <div class='card-media'>
+          <img src='images/%C4%90%C3%B4ng/IMG20251118150921.jpg' alt='Album Đông' loading='lazy' />
+        </div>
+        <div class='card-body'>
+          <h3>Đông</h3>
+          <span class='count-chip'>17 ảnh</span>
+        </div>
+      </a>
+      <a class='person-card' href='%C4%90%C4%83ng.html' data-person-card data-name='Đăng' style='--i: 42'>
+        <div class='card-media'>
+          <img src='images/%C4%90%C4%83ng/IMG20250815102907.jpg' alt='Album Đăng' loading='lazy' />
+        </div>
+        <div class='card-body'>
+          <h3>Đăng</h3>
+          <span class='count-chip'>3 ảnh</span>
+        </div>
+      </a>
+      </div>
+      <div class='empty-state' data-empty-state style='display: none;'>Không tìm thấy album phù hợp.</div>
     </section>
 
-    <footer>
-      Album ảnh troll vui lớp 7H – làm cho vui, không bêu xấu ai ❤️
-    </footer>
+    <section id='about' class='about'>
+      <div class='about-card'>
+        <h3>Hướng dẫn xem nhanh</h3>
+        <p>Chọn tên bạn trong danh sách để mở album. Ảnh sẽ tự động tải chậm để mở nhanh hơn.</p>
+      </div>
+      <div class='about-card'>
+        <h3>Cập nhật ảnh mới</h3>
+        <p>Chỉ cần thêm ảnh vào đúng folder của bạn, sau đó build lại trang là được.</p>
+      </div>
+      <div class='about-card'>
+        <h3>Chia sẻ cùng cả lớp</h3>
+        <p>Gửi link trang chủ cho mọi người để cùng xem những khoảnh khắc đẹp nhé.</p>
+      </div>
+    </section>
   </main>
+
+  <footer class='site-footer'>
+    Album sinh nhật lớp 7H - Lưu giữ kỷ niệm cho cả lớp.
+  </footer>
+
+  <script src='assets/site.js' defer></script>
 </body>
 </html>
